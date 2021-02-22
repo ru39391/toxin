@@ -1,0 +1,43 @@
+$red: #f00;
+$gray: #ccc;
+
+@mixin red {
+    color: $red;
+}
+
+h1 {
+    @include red;
+}
+
+h2 {
+    color: $gray;
+    transform: skew(25deg);
+}
+
+.d-none {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.bg {
+    width: 400px;
+    height: 250px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #000;
+    background: url(../img/bg.jpg) no-repeat scroll 0 0 rgba(0,0,0,0);
+    background-size: 100% auto;
+}
+
+// svg sprite example
+
+.icons {
+  @extend .d-none;
+}
+
+.icon-stroke {
+  stroke: currentColor;
+}
